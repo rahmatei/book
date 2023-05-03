@@ -14,6 +14,9 @@ import 'package:flutter/services.dart';
 class $AssetsIconsGen {
   const $AssetsIconsGen();
 
+  /// File path: assets/icons/add.svg
+  SvgGenImage get add => const SvgGenImage('assets/icons/add.svg');
+
   /// File path: assets/icons/clarity_notification_outline_badged.svg
   SvgGenImage get clarityNotificationOutlineBadged =>
       const SvgGenImage('assets/icons/clarity_notification_outline_badged.svg');
@@ -42,6 +45,12 @@ class $AssetsIconsGen {
   SvgGenImage get ionLibrarySelected =>
       const SvgGenImage('assets/icons/ion_library_selected.svg');
 
+  /// File path: assets/icons/lib1.svg
+  SvgGenImage get lib1 => const SvgGenImage('assets/icons/lib1.svg');
+
+  /// File path: assets/icons/lib2.svg
+  SvgGenImage get lib2 => const SvgGenImage('assets/icons/lib2.svg');
+
   /// File path: assets/icons/mdi_bell_notification.svg
   SvgGenImage get mdiBellNotification =>
       const SvgGenImage('assets/icons/mdi_bell_notification.svg');
@@ -57,6 +66,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/menu.svg
   SvgGenImage get menu => const SvgGenImage('assets/icons/menu.svg');
 
+  /// File path: assets/icons/plus.svg
+  SvgGenImage get plus => const SvgGenImage('assets/icons/plus.svg');
+
   /// File path: assets/icons/ri_search_line.svg
   SvgGenImage get riSearchLine =>
       const SvgGenImage('assets/icons/ri_search_line.svg');
@@ -64,8 +76,15 @@ class $AssetsIconsGen {
   /// File path: assets/icons/scan_dash.svg
   SvgGenImage get scanDash => const SvgGenImage('assets/icons/scan_dash.svg');
 
+  /// File path: assets/icons/star.svg
+  SvgGenImage get star => const SvgGenImage('assets/icons/star.svg');
+
+  /// File path: assets/icons/starfiled.svg
+  SvgGenImage get starfiled => const SvgGenImage('assets/icons/starfiled.svg');
+
   /// List of all assets
   List<SvgGenImage> get values => [
+        add,
         clarityNotificationOutlineBadged,
         fluentBook20Filled,
         fluentBookSelected,
@@ -73,12 +92,17 @@ class $AssetsIconsGen {
         fluentPeopleCommunitySelected,
         ionLibrary,
         ionLibrarySelected,
+        lib1,
+        lib2,
         mdiBellNotification,
         mdiCartVariant,
         mdiCartVariantSelected,
         menu,
+        plus,
         riSearchLine,
-        scanDash
+        scanDash,
+        star,
+        starfiled
       ];
 }
 
