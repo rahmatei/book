@@ -1,5 +1,6 @@
 import 'package:book/gen/assets.gen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class LibScreen extends StatefulWidget {
   const LibScreen({super.key});
@@ -12,86 +13,135 @@ class _LibScreenState extends State<LibScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: Colors.white,
         body: SingleChildScrollView(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          Container(
-            padding: const EdgeInsets.fromLTRB(15, 10, 15, 0),
-            width: double.infinity,
-            color: Colors.white,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const MainAppBar(),
-                Container(
-                  padding: const EdgeInsets.fromLTRB(0, 15, 0, 25),
-                  width: double.infinity,
-                  child: const Text('Hi Emily,',
-                      style: TextStyle(
-                          color: Color.fromARGB(255, 22, 92, 115),
-                          fontSize: 17)),
-                ),
-                MainHeader(
-                  title: 'My Library,',
-                  textColor: const Color.fromARGB(255, 22, 92, 115),
-                ),
-                const MyLibrary(),
-                const SizedBox(
-                  height: 15,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          child: Column(
+            children: [
+              Container(
+                padding: const EdgeInsets.fromLTRB(15, 10, 15, 0),
+                width: double.infinity,
+                color: Colors.white,
+                child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    MainHeader(
-                      title: 'My Wishlist',
-                      textColor: const Color.fromARGB(255, 228, 149, 39),
-                    ),
+                    const MainAppBar(),
                     Container(
-                      padding: const EdgeInsets.fromLTRB(10, 2, 10, 2),
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(5),
-                          border:
-                              Border.all(color: Colors.grey.withOpacity(0.5))),
-                      child: const Text(
-                        'See More',
-                        style:
-                            TextStyle(color: Color.fromARGB(255, 228, 149, 39)),
+                      padding: const EdgeInsets.fromLTRB(0, 15, 0, 25),
+                      width: double.infinity,
+                      child: const Text('Hi Emily,',
+                          style: TextStyle(
+                              color: Color.fromARGB(255, 22, 92, 115),
+                              fontSize: 17)),
+                    ),
+                    MainHeader(
+                      title: 'My Library,',
+                      textColor: const Color.fromARGB(255, 22, 92, 115),
+                    ),
+                    const MyLibrary(),
+                    const SizedBox(
+                      height: 15,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        MainHeader(
+                          title: 'My Wishlist',
+                          textColor: const Color.fromARGB(255, 228, 149, 39),
+                        ),
+                        Container(
+                          padding: const EdgeInsets.fromLTRB(10, 2, 10, 2),
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(5),
+                              border: Border.all(
+                                  color: Colors.grey.withOpacity(0.5))),
+                          child: const Text(
+                            'See More',
+                            style: TextStyle(
+                                color: Color.fromARGB(255, 228, 149, 39)),
+                          ),
+                        )
+                      ],
+                    ),
+                    SizedBox(
+                      height: 375,
+                      width: double.infinity,
+                      child: GridView.builder(
+                        gridDelegate:
+                            const SliverGridDelegateWithFixedCrossAxisCount(
+                                crossAxisCount: 2,
+                                crossAxisSpacing: 7,
+                                mainAxisSpacing: 13,
+                                childAspectRatio: 138 / 85),
+                        itemBuilder: (context, index) {
+                          return Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Assets.icons.rectangle1.image(),
+                              const SizedBox(
+                                width: 3,
+                              ),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  const Text(
+                                    'Book Lovers',
+                                    style: TextStyle(
+                                        color:
+                                            Color.fromARGB(255, 22, 92, 115)),
+                                  ),
+                                  const Text(
+                                    'Emily Henry',
+                                    style: TextStyle(
+                                        color:
+                                            Color.fromARGB(255, 151, 151, 151)),
+                                  ),
+                                  const SizedBox(
+                                    height: 30,
+                                  ),
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    children: [
+                                      const SizedBox(
+                                        width: 4,
+                                      ),
+                                      Assets.icons.starfiled.svg(),
+                                      const SizedBox(
+                                        width: 2,
+                                      ),
+                                      Assets.icons.starfiled.svg(),
+                                      const SizedBox(
+                                        width: 2,
+                                      ),
+                                      Assets.icons.starfiled.svg(),
+                                      const SizedBox(
+                                        width: 2,
+                                      ),
+                                      Assets.icons.star.svg(),
+                                      const SizedBox(
+                                        width: 2,
+                                      ),
+                                      Assets.icons.star.svg(),
+                                    ],
+                                  )
+                                ],
+                              )
+                            ],
+                          );
+                        },
+                        itemCount: 6,
                       ),
                     )
                   ],
                 ),
-                Center(
-                  child: SizedBox(
-                    width: 300,
-                    height: 300,
-                    child: GridView.count(
-                      crossAxisCount: 2,
-                      children: List.generate(
-                        6,
-                        (index) {
-                          return Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Container(
-                              decoration: BoxDecoration(
-                                color: Colors.amber,
-                                borderRadius: BorderRadius.circular(10)
-                              ),
-                            ),
-                          );
-                        },
-                      ),
-                    ),
-                  ),
-                )
-              ],
-            ),
+              ),
+              const SizedBox(
+                height: 50,
+              ),
+            ],
           ),
-          SizedBox(height: 50,)
-        ],
-      ),
-    ));
+        ));
   }
 }
 
@@ -166,7 +216,6 @@ class MyLibrary extends StatelessWidget {
                         height: 150,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-                            color: Colors.amber,
                             boxShadow: [
                               BoxShadow(
                                   blurRadius: 3,
@@ -175,7 +224,7 @@ class MyLibrary extends StatelessWidget {
                                   spreadRadius: 1)
                             ],
                             image: const DecorationImage(
-                                image: AssetImage('asstes/icons/lib1.png'),
+                                image: AssetImage('assets/icons/lib1.png'),
                                 fit: BoxFit.cover)),
                       ),
                       const SizedBox(

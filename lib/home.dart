@@ -21,14 +21,13 @@ class _MyHomeState extends State<MyHome> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: Container(
-        decoration: BoxDecoration(
-          color: Colors.white,
-          boxShadow: [
-            BoxShadow(
-           spreadRadius: 1,blurRadius: 15,color: Colors.grey.withOpacity(0.7),offset:const  Offset(0, 2)
-          )
-          ]
-        ),
+        decoration: BoxDecoration(color: Colors.white, boxShadow: [
+          BoxShadow(
+              spreadRadius: 1,
+              blurRadius: 15,
+              color: Colors.grey.withOpacity(0.7),
+              offset: const Offset(0, 2))
+        ]),
         width: double.infinity,
         height: 80,
         child: Row(
@@ -154,8 +153,9 @@ class _MyHomeState extends State<MyHome> {
       ),
       body: SafeArea(
           child: IndexedStack(
+        alignment: Alignment.center,
         index: selectedIndexBottomSheetNavigation,
-        children:  [
+        children: const [
           LibScreen(),
           ExploreScreen(),
           CommunityScreen(),

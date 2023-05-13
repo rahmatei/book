@@ -45,8 +45,11 @@ class $AssetsIconsGen {
   SvgGenImage get ionLibrarySelected =>
       const SvgGenImage('assets/icons/ion_library_selected.svg');
 
+  /// File path: assets/icons/lib1.png
+  AssetGenImage get lib1Png => const AssetGenImage('assets/icons/lib1.png');
+
   /// File path: assets/icons/lib1.svg
-  SvgGenImage get lib1 => const SvgGenImage('assets/icons/lib1.svg');
+  SvgGenImage get lib1Svg => const SvgGenImage('assets/icons/lib1.svg');
 
   /// File path: assets/icons/lib2.svg
   SvgGenImage get lib2 => const SvgGenImage('assets/icons/lib2.svg');
@@ -69,6 +72,10 @@ class $AssetsIconsGen {
   /// File path: assets/icons/plus.svg
   SvgGenImage get plus => const SvgGenImage('assets/icons/plus.svg');
 
+  /// File path: assets/icons/rectangle1.png
+  AssetGenImage get rectangle1 =>
+      const AssetGenImage('assets/icons/rectangle1.png');
+
   /// File path: assets/icons/ri_search_line.svg
   SvgGenImage get riSearchLine =>
       const SvgGenImage('assets/icons/ri_search_line.svg');
@@ -82,8 +89,16 @@ class $AssetsIconsGen {
   /// File path: assets/icons/starfiled.svg
   SvgGenImage get starfiled => const SvgGenImage('assets/icons/starfiled.svg');
 
+  /// File path: assets/icons/wishlist1.png
+  AssetGenImage get wishlist1 =>
+      const AssetGenImage('assets/icons/wishlist1.png');
+
+  /// File path: assets/icons/wishlist2.png
+  AssetGenImage get wishlist2 =>
+      const AssetGenImage('assets/icons/wishlist2.png');
+
   /// List of all assets
-  List<SvgGenImage> get values => [
+  List<dynamic> get values => [
         add,
         clarityNotificationOutlineBadged,
         fluentBook20Filled,
@@ -92,17 +107,21 @@ class $AssetsIconsGen {
         fluentPeopleCommunitySelected,
         ionLibrary,
         ionLibrarySelected,
-        lib1,
+        lib1Png,
+        lib1Svg,
         lib2,
         mdiBellNotification,
         mdiCartVariant,
         mdiCartVariantSelected,
         menu,
         plus,
+        rectangle1,
         riSearchLine,
         scanDash,
         star,
-        starfiled
+        starfiled,
+        wishlist1,
+        wishlist2
       ];
 }
 
