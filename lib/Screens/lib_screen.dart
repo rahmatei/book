@@ -1,6 +1,5 @@
 import 'package:book/gen/assets.gen.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 import '../widgets/appbar.dart';
 
@@ -281,4 +280,3 @@ class MyLibrary extends StatelessWidget {
     );
   }
 }
-

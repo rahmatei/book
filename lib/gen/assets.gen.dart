@@ -84,6 +84,30 @@ class $AssetsIconsGen {
   SvgGenImage get rectangle13Svg =>
       const SvgGenImage('assets/icons/rectangle_13.svg');
 
+  /// File path: assets/icons/rectangle_2.png
+  AssetGenImage get rectangle2 =>
+      const AssetGenImage('assets/icons/rectangle_2.png');
+
+  /// File path: assets/icons/rectangle_3.png
+  AssetGenImage get rectangle3 =>
+      const AssetGenImage('assets/icons/rectangle_3.png');
+
+  /// File path: assets/icons/rectangle_4.jpg
+  AssetGenImage get rectangle4 =>
+      const AssetGenImage('assets/icons/rectangle_4.jpg');
+
+  /// File path: assets/icons/rectangle_5.png
+  AssetGenImage get rectangle5 =>
+      const AssetGenImage('assets/icons/rectangle_5.png');
+
+  /// File path: assets/icons/rectangle_6.png
+  AssetGenImage get rectangle6 =>
+      const AssetGenImage('assets/icons/rectangle_6.png');
+
+  /// File path: assets/icons/rectangle_7.png
+  AssetGenImage get rectangle7 =>
+      const AssetGenImage('assets/icons/rectangle_7.png');
+
   /// File path: assets/icons/ri_search_line.svg
   SvgGenImage get riSearchLine =>
       const SvgGenImage('assets/icons/ri_search_line.svg');
@@ -126,6 +150,12 @@ class $AssetsIconsGen {
         rectangle1,
         rectangle13Png,
         rectangle13Svg,
+        rectangle2,
+        rectangle3,
+        rectangle4,
+        rectangle5,
+        rectangle6,
+        rectangle7,
         riSearchLine,
         scanDash,
         star,
