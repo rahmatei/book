@@ -76,6 +76,14 @@ class $AssetsIconsGen {
   AssetGenImage get rectangle1 =>
       const AssetGenImage('assets/icons/rectangle1.png');
 
+  /// File path: assets/icons/rectangle_13.png
+  AssetGenImage get rectangle13Png =>
+      const AssetGenImage('assets/icons/rectangle_13.png');
+
+  /// File path: assets/icons/rectangle_13.svg
+  SvgGenImage get rectangle13Svg =>
+      const SvgGenImage('assets/icons/rectangle_13.svg');
+
   /// File path: assets/icons/ri_search_line.svg
   SvgGenImage get riSearchLine =>
       const SvgGenImage('assets/icons/ri_search_line.svg');
@@ -116,6 +124,8 @@ class $AssetsIconsGen {
         menu,
         plus,
         rectangle1,
+        rectangle13Png,
+        rectangle13Svg,
         riSearchLine,
         scanDash,
         star,
