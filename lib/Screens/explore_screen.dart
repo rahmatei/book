@@ -1,5 +1,7 @@
 import 'dart:async';
 
+import 'package:book/Screens/cart_screen.dart';
+import 'package:book/Screens/detail_book.dart';
 import 'package:book/gen/assets.gen.dart';
 import 'package:book/models/categories.dart';
 import 'package:flutter/material.dart';
@@ -149,6 +151,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
                   },
                   style: const ButtonStyle(
                     overlayColor: MaterialStatePropertyAll(Colors.transparent),
+                    padding: MaterialStatePropertyAll(EdgeInsets.zero)
                   ),
                   child: Container(
                     decoration: BoxDecoration(
@@ -179,12 +182,17 @@ class _ExploreScreenState extends State<ExploreScreen> {
                     crossAxisCount: 3,
                     crossAxisSpacing: 7,
                     mainAxisSpacing: 13,
-                    childAspectRatio: 0.60),
+                    childAspectRatio: 0.58),
                 itemBuilder: (context, index) {
-                  return ItemCategoryListGridView(
-                    image: listDataArtGrid[index].image!,
-                    text1: listDataArtGrid[index].title!,
-                    text2: listDataArtGrid[index].subject!,
+                  return InkWell(
+                    onTap: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => DetailBook(),));
+                    },
+                    child: ItemCategoryListGridView(
+                      image: listDataArtGrid[index].image!,
+                      text1: listDataArtGrid[index].title!,
+                      text2: listDataArtGrid[index].subject!,
+                    ),
                   );
                 },
                 itemCount: 6),

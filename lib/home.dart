@@ -23,11 +23,13 @@ class _MyHomeState extends State<MyHome> {
           child: IndexedStack(
         alignment: Alignment.center,
         index: selectedIndexBottomSheetNavigation,
-        children: const [
-          LibScreen(),
-          ExploreScreen(),
-          CommunityScreen(),
-          CartScreen(),
+        children:  [
+          Navigator(
+            onGenerateRoute: (settings) => MaterialPageRoute(builder: (context) => const LibScreen(),),
+          ),
+          Navigator(onGenerateRoute: (settings) => MaterialPageRoute(builder: (context) => const ExploreScreen(),),),
+          Navigator(onGenerateRoute: (settings) => MaterialPageRoute(builder: (context) => const CommunityScreen(),),),
+          Navigator(onGenerateRoute: (settings) => MaterialPageRoute(builder: (context) => const CartScreen(),),),
         ],
       )),
     );

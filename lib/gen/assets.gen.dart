@@ -14,12 +14,23 @@ import 'package:flutter/services.dart';
 class $AssetsIconsGen {
   const $AssetsIconsGen();
 
+  /// File path: assets/icons/Rectangle_18.png
+  AssetGenImage get rectangle18 =>
+      const AssetGenImage('assets/icons/Rectangle_18.png');
+
   /// File path: assets/icons/add.svg
   SvgGenImage get add => const SvgGenImage('assets/icons/add.svg');
+
+  /// File path: assets/icons/arrow_back.svg
+  SvgGenImage get arrowBack => const SvgGenImage('assets/icons/arrow_back.svg');
 
   /// File path: assets/icons/clarity_notification_outline_badged.svg
   SvgGenImage get clarityNotificationOutlineBadged =>
       const SvgGenImage('assets/icons/clarity_notification_outline_badged.svg');
+
+  /// File path: assets/icons/ellipse_2.png
+  AssetGenImage get ellipse2 =>
+      const AssetGenImage('assets/icons/ellipse_2.png');
 
   /// File path: assets/icons/fluent_book-20-filled.svg
   SvgGenImage get fluentBook20Filled =>
@@ -131,8 +142,11 @@ class $AssetsIconsGen {
 
   /// List of all assets
   List<dynamic> get values => [
+        rectangle18,
         add,
+        arrowBack,
         clarityNotificationOutlineBadged,
+        ellipse2,
         fluentBook20Filled,
         fluentBookSelected,
         fluentPeopleCommunity16Filled,
